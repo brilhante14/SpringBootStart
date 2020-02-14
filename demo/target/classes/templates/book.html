@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://thymeleaf.org">
+	 <head>
+		 <title>Book list - Spring Boot</title>
+	 </head>
+
+	 <body> 
+	 	<h1 align="center">Books available:</h1>
+		<br/>
+		<table border="1" cellpadding="10" align="center">
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+			</tr>
+			<tr th:each="book : ${books}">
+				<td th:text="${book.title}">Title</td>
+				<td th:text="${book.author}">Author</td>
+			
+			</tr>
+		</table>
+	 </body>
+</html>
+
+
